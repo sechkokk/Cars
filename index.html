@@ -39,7 +39,7 @@ body::before{
     var(--m-red) 66%, var(--m-red) 100%);
 }
 
-/* Тонкая вертикальная линия-направляющая слева — журнальная фишка */
+
 .rail{
   position:fixed;
   top:0;left:28px;
@@ -50,7 +50,7 @@ body::before{
 }
 .rail.right{left:auto;right:28px}
 
-/* NAV */
+
 nav{
   position:sticky;top:0;z-index:50;
   background:rgba(8,8,8,.7);
@@ -77,9 +77,7 @@ nav a{
 }
 nav a:hover{color:var(--text)}
 
-/* ══════════════════════════════════════
-   HERO — слева текст, справа фото
-   ══════════════════════════════════════ */
+
 header{
   max-width:1280px;margin:0 auto;
   padding:120px 56px 90px;
@@ -153,7 +151,7 @@ header .lead{
   background:transparent;
 }
 
-/* Мини-статы под кнопками — в столбик с разделителями */
+
 .hero-stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -204,7 +202,7 @@ mask-image:
     transparent 100%);
 }
 .hero-visual:hover img{transform:scale(1.03)}
-/* SECTION */
+
 section{
   max-width:1280px;margin:0 auto;
   padding:100px 56px;
@@ -238,9 +236,7 @@ h2{
 }
 .reveal.in{opacity:1;transform:translateY(0)}
 
-/* ══════════════════════════════════════
-   FEATURED — фото на фоне, текст поверх
-   ══════════════════════════════════════ */
+
 .featured{
   border-radius:6px;
   overflow:hidden;
@@ -303,9 +299,7 @@ h2{
   text-transform:uppercase;margin-bottom:.4em;
 }
 
-/* ══════════════════════════════════════
-   CARDS — фото во всю карточку, текст поверх
-   ══════════════════════════════════════ */
+
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -364,9 +358,7 @@ h2{
 }
 .card:hover .more{border-bottom-color:var(--m-light)}
 
-/* ══════════════════════════════════════
-   TABLE — чистая, без визуального шума
-   ══════════════════════════════════════ */
+
 .table-wrap{
   overflow-x:auto;
   -webkit-overflow-scrolling:touch;
@@ -420,9 +412,7 @@ tfoot td{
   letter-spacing:.05em;
 }
 
-/* ══════════════════════════════════════
-   NEWSLETTER
-   ══════════════════════════════════════ */
+
 .newsletter{
   border:1px solid var(--line);
   border-radius:6px;
@@ -477,9 +467,6 @@ footer{
 footer a{transition:color .2s}
 footer a:hover{color:var(--text)}
 
-/* ══════════════════════════════════════
-   АДАПТИВ
-   ══════════════════════════════════════ */
 @media(max-width:960px){
   .rail{display:none}
   header{grid-template-columns:1fr;gap:48px;padding:80px 28px 60px}
@@ -657,7 +644,7 @@ footer a:hover{color:var(--text)}
 </footer>
 
 <script>
-/* Мягкое появление блоков */
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -668,7 +655,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
 
-/* Форма подписки */
+
 document.getElementById('subscribeForm').addEventListener('submit', function(e){
   e.preventDefault();
   const btn = this.querySelector('button');
